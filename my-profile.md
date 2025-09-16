@@ -5,6 +5,25 @@
 - 程式
 - 爆睡一波
 
-座右銘:*To be or not to be, that is the question*
+座右銘:*支付80念珠以解鎖*
 
 [點我聽歌](https://www.youtube.com/watch?v=AqI97zHMoQw)
+![image](abaaba.jpg)
+
+>To be or not to be, that is the question
+
+| 學校名稱 | 科系 | 
+|:---|:---:|
+| 國立高雄科技大學 | 資訊管理系 | 
+| 國立鳳山商工 | 資料處理系 |
+
+```python
+print("Hello, Markdown!")
+```
+
+表格： 
+| 任務名稱 | 狀態 | 負責人 | 截止日期 | 
+|---|:---:|:---:|---:| 
+| 需求分析 | 完成 | 小明 | 2023-01-15 | 
+| 資料庫設計 | 進行中 | 小華 | 2023-01-30 | 
+| 前端介面 | 未開始 | 小李 | 2023-02-15 |
