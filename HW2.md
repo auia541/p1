@@ -36,7 +36,7 @@ section 任務
 取得硬體 :a3, after a1, 17d
 程式開發 :crit,a4, after a2, 70d
 安裝硬體 :a5, after a3, 3d
-程式安裝 :a6, after a4, 30d
+程式安裝 :crit,a6, after a4, 30d
 撰寫使用手冊 :a7, after a5, 25d
 轉換檔案 :a8, after a5, 20d
 系統測試 :crit,a9, after a6, 25d
