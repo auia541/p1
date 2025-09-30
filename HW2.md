@@ -3,7 +3,7 @@
 ## 1. PERT/CPM 圖
 ```mermaid
 graph TD
-    A1[1 研擬計畫 4天] --> A2[2 任務分配 1天]
+    A1[1 研擬計畫 1天] --> A2[2 任務分配 4天]
     A1 --> A3[3 取得硬體 17天]
     A2 --> A4[4 程式開發 70天]
     A3 --> A5[5 安裝硬體 3天]
@@ -31,8 +31,8 @@ dateformat YYYY-MM-DD
 axisFormat %m/%d
 
 section 任務
-研擬計畫 :crit,a1, 2025-10-01, 4d
-任務分配 :crit,a2, after a1, 1d
+研擬計畫 :crit,a1, 2025-10-01, 1d
+任務分配 :crit,a2, after a1, 4d
 取得硬體 :a3, after a1, 17d
 程式開發 :crit,a4, after a2, 70d
 安裝硬體 :a5, after a3, 3d
