@@ -27,48 +27,16 @@ gantt
 ```
 
 ```graphviz
-digraph project_flow {
+digraph hierarchy {
 
-    nodesep=0.75
-    rankdir=LR // 從左到右的方向
-    
-    node [fontname="Microsoft JhengHei", shape=box, style="rounded,filled", fontsize=10]
-    edge [color=gray60]
-    
-    // 所有任務節點
-    plan [label="1. 研擬計畫\n(1天)", fillcolor="lightcoral"]
-    assign [label="2. 任務分配\n(4天)", fillcolor="lightcoral"]  
-    hardware [label="3. 取得硬體\n(17天)", fillcolor="lightblue"]
-    develop [label="4. 程式開發\n(70天)", fillcolor="lightcoral"]
-    install [label="5. 安裝硬體\n(10天)", fillcolor="lightblue"]
-    test [label="6. 程式測試\n(30天)", fillcolor="lightcoral"]
-    manual [label="7. 撰寫手冊\n(25天)", fillcolor="lightblue"]
-    convert [label="8. 轉換檔案\n(20天)", fillcolor="lightblue"]
-    system [label="9. 系統測試\n(25天)", fillcolor="lightcoral"]
-    training [label="10. 使用者訓練\n(20天)", fillcolor="lightblue"]
-    final [label="11. 使用者測試\n(25天)", fillcolor="lightcoral"]
-    
-    // 連接關係
-    plan->assign
-    plan->hardware
-    assign->develop
-    hardware->install
-    develop->test
-    install->manual
-    install->convert
-    test->system
-    manual->training
-    convert->training
-    system->final
-    training->final
-    
-    // 圖例說明
-    subgraph cluster_legend {
-        label="圖例說明"
-        labelloc=b
-        style=dashed
-        key_critical [label="關鍵路徑任務", fillcolor="lightcoral"]
-        key_normal [label="非關鍵路徑任務", fillcolor="lightblue"]
-    }
+                nodesep=1.0 // increases the separation between nodes
+                
+                node [color=Red,fontname=Courier,shape=box] //All nodes will this shape and colour
+                edge [color=Blue, style=dashed] //All the lines look like this
+
+                Headteacher->{Deputy1 Deputy2 BusinessManager}
+                Deputy1->{Teacher1 Teacher2}
+                BusinessManager->ITManager
+                {rank=same;ITManager Teacher1 Teacher2}  // Put them on the same level
 }
 ```
